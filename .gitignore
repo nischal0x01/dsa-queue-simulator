@@ -2,6 +2,7 @@
 build/
 bin/
 obj/
+libs/
 
 # Compiled Object files
 *.o
