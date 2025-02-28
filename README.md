@@ -2,12 +2,14 @@
 
 A DSA project implementing a queue-based traffic management system for a four-way intersection with priority lanes and free-turning lanes.
 
+<div align="center">
+  <img src="simulator.png" alt="Traffic Junction Demo" width="80%" />
+  <br><br>
+  <img src="showcase.gif" alt="Traffic Junction Simulator Demo with traffic generator" width="80%" />
+</div>
 
-![Traffic Junction Demo](simulator.png)
-![Traffic Junction Simulator Demo with traffic generator](showcase.gif)
-
-##  Overview
-##  Key Features
+## Overview
+## Key Features
 
 - **Queue-based Traffic Management**: Using linear data structures to solve a real-world problem
 - **Multiple Lane Types**:
@@ -19,13 +21,13 @@ A DSA project implementing a queue-based traffic management system for a four-wa
 - **Realistic Vehicle Movement**: Proper queueing and turning animation
 - **Multi-lane Intersection**: Handles 3-lane roads in a four-way intersection
 
-##  Implementation Details
+## Implementation Details
 
-###  Data Structures
+### Data Structures
 - **Basic Queue**: FIFO queue for vehicles in each lane
 - **Priority Queue**: Used for lane management with priority values
 
-###  Algorithms
+### Algorithms
 - **Traffic Light Calculation**: Total time = |V| * t where:
   - |V| = Average vehicles waiting = (1/n) * Σ|Li|
   - n = Number of normal lanes
@@ -59,11 +61,11 @@ The system consists of two main components:
   - BL2 → AL1 or DL1
   - CL2 → AL2 or BL1
 
-##  Prerequisites
+## Prerequisites
 - C++17 compatible compiler (GCC 8+, Clang 7+, MSVC 19.14+)
 
 
-##  Building the Project
+## Building and Running the Project
 
 ### Installing SDL3
 SDL3 is still in development and may not be available in standard package managers. You'll need to build it from source:
@@ -116,9 +118,7 @@ cmake --build . --config Release
 cmake --install . --config Release
 ```
 
-Alternatively, you can build SDL3 and place it in a `libs/SDL3_install` directory within the project (this path is configured in CMakeLists.txt).
-
-### How to run this??
+### Building the Application
 
 #### Linux/macOS
 ```bash
@@ -148,7 +148,7 @@ cmake .. -G "Visual Studio 17 2022" -A x64
 cmake --build . --config Release
 ```
 
-##  Running the Simulation
+### Running the Simulation
 
 1. Open two terminal windows
 2. In the first terminal, run the traffic generator:
