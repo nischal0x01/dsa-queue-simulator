@@ -1,4 +1,4 @@
-# Traffic Junction Simulator 🚦
+# Traffic Junction Simulator 
 
 A DSA project implementing a queue-based traffic management system for a four-way intersection with priority lanes and free-turning lanes.
 
