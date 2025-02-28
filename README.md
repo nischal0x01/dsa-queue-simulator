@@ -6,10 +6,7 @@ A DSA project implementing a queue-based traffic management system for a four-wa
 ![Traffic Junction Demo](simulator.png)
 ![Traffic Junction Simulator Demo with traffic generator](showcase.gif)
 
-## 📋 Overview
-
-This project simulates a traffic junction where vehicles navigate through an intersection governed by traffic lights and lane-specific rules, demonstrating the practical application of queue data structures in C++ with SDL3 visualization.
-
+##  Overview
 ##  Key Features
 
 - **Queue-based Traffic Management**: Using linear data structures to solve a real-world problem
@@ -37,7 +34,7 @@ This project simulates a traffic junction where vehicles navigate through an int
 - **Free Lane Routing**: Lane 3 vehicles can always turn left regardless of traffic light state
 
 
-## 📂 System Architecture
+## System Architecture
 
 The system consists of two main components:
 
@@ -64,10 +61,9 @@ The system consists of two main components:
 
 ##  Prerequisites
 - C++17 compatible compiler (GCC 8+, Clang 7+, MSVC 19.14+)
-- CMake 3.15 or higher
-- SDL3 library
 
-## 🏗️ Building the Project
+
+##  Building the Project
 
 ### Installing SDL3
 SDL3 is still in development and may not be available in standard package managers. You'll need to build it from source:
@@ -122,7 +118,7 @@ cmake --install . --config Release
 
 Alternatively, you can build SDL3 and place it in a `libs/SDL3_install` directory within the project (this path is configured in CMakeLists.txt).
 
-### Building the Traffic Junction Simulator
+### How to run this??
 
 #### Linux/macOS
 ```bash
@@ -152,9 +148,7 @@ cmake .. -G "Visual Studio 17 2022" -A x64
 cmake --build . --config Release
 ```
 
-## 🚀 Running the Simulation
-
-You need to run both the traffic generator and simulator:
+##  Running the Simulation
 
 1. Open two terminal windows
 2. In the first terminal, run the traffic generator:
@@ -173,20 +167,5 @@ You need to run both the traffic generator and simulator:
    # Windows
    .\bin\Release\simulator.exe
    ```
-
-## 📝 Implementation Requirements
-
-This project satisfies the following requirements:
-
-- **Linear Data Structures**:
-  - Implementation of Queue for vehicle management
-  - Implementation of Priority Queue for lane priority
-- **Traffic Conditions**:
-  - Normal Condition: Vehicles served equally from each lane when traffic is balanced
-  - Priority Condition: Lane A2 receives priority when it has >10 vehicles
-- **Lane Rules**:
-  - L1: Incoming lane (vehicles arrive here from other roads)
-  - L2: Regular lane that follows traffic light (can go straight or turn left)
-  - L3: Free lane that always allows left turns regardless of light state
 
 ---
