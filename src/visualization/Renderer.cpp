@@ -1362,16 +1362,3 @@ void Renderer::setTrafficManager(TrafficManager* manager) {
     trafficManager = manager;
 }
 
-void TrafficManager::readVehicles() {
-    if (!fileHandler) {
-        DebugLogger::log("FileHandler not initialized", DebugLogger::LogLevel::ERROR);
-        return;
-    }
-
-    // Ensure directories exist before reading
-    if (!fileHandler->checkFilesExist()) {
-        if (!fileHandler->initializeFiles()) {
-            DebugLogger::log("Failed to initialize files", DebugLogger::LogLevel::ERROR);
-            return;
-        }
-    }
