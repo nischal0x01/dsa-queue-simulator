@@ -244,7 +244,7 @@ void TrafficLight::drawTrafficControlCenter(SDL_Renderer* renderer) {
     SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 
     // Panel main background
-    SDL_SetRenderDrawColor(renderer, 10, 20, 40, 180);
+    SDL_SetRenderDrawColor(renderer, 30, 90, 80, 200);
     SDL_FRect panel = {
         static_cast<float>(PANEL_X),
         static_cast<float>(PANEL_Y),
