@@ -89,54 +89,9 @@ enum class VehicleDirection {
     LEFT = 1,
     RIGHT = 2
 };
+// render issue
 
-// The RenderSystem class for main visualization
-class RenderSystem {
-public:
-    SDL_Window* window;
-    SDL_Renderer* rendererSDL;
-    int windowWidth;
-    int windowHeight;
-    bool active;
-    bool showDebug;
-    TrafficManager* trafficMgr;
 
-    RenderSystem()
-        : window(nullptr),
-          rendererSDL(nullptr),
-          windowWidth(800),
-          windowHeight(800),
-          active(false),
-          showDebug(false), // Set to false to disable debug overlay
-          trafficMgr(nullptr) {}
-
-    ~RenderSystem() {
-        cleanup();
-    }
-
-    // Initialize renderer
-    bool initialize(int width, int height, const std::string& title) {
-        windowWidth = width;
-        windowHeight = height;
-
-        // Create window
-        window = SDL_CreateWindow(title.c_str(), width, height, SDL_WINDOW_OPENGL);
-        if (!window) {
-            log_message("Failed to create window: " + std::string(SDL_GetError()));
-            return false;
-        }
-
-        // Create renderer
-        rendererSDL = SDL_CreateRenderer(window, NULL);
-        if (!rendererSDL) {
-            log_message("Failed to create renderer: " + std::string(SDL_GetError()));
-            return false;
-        }
-
-        active = true;
-        log_message("Renderer initialized successfully");
-        return true;
-    }
 
     // Set traffic manager
     void setTrafficManager(TrafficManager* manager) {
